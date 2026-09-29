@@ -8,4 +8,5 @@
 
   --color-lime-400: #cbfc01;
   --color-blue-800: #000000; /* Persian Blue/800 er hex din */
+  --font-sans: var(--font-main);
 }
