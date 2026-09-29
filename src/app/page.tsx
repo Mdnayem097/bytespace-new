@@ -1,3 +1,13 @@
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+
 export default function Home() {
-  return <h1>ByteSpace</h1>;
+  return (
+    <div className="bg-blue-800 bg-grid">
+      <Navbar />
+      <main>
+        <Hero />
+      </main>
+    </div>
+  );
 }

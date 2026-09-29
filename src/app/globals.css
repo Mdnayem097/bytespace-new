@@ -1,12 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gray-50: #ffffff;
-  --color-gray-100: #f6f6f6;
-  --color-gray-400: #000000; /* Shuttle Gray/400 er hex din */
-  --color-gray-950: #000000; /* Shuttle Gray/950 er hex din */
+  --color-gray-50: #F5F5F6;
+  --color-gray-100: #E5E6E8;
+  --color-gray-400: #82868E; /* Shuttle Gray/400 er hex din */
+  --color-gray-950: #242528; /* Shuttle Gray/950 er hex din */
 
-  --color-lime-400: #cbfc01;
-  --color-blue-800: #000000; /* Persian Blue/800 er hex din */
+  --color-lime-400: #D4FB20;
+  --color-blue-800: #003BE2; /* Persian Blue/800 er hex din */
   --font-sans: var(--font-main);
+  --font-display: var(--font-clash);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
