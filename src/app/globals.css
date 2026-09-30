@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gray-50: #F5F5F6;
-  --color-gray-100: #E5E6E8;
-  --color-gray-400: #82868E; /* Shuttle Gray/400 er hex din */
+  --color-gray-50: #f5f5f6;
+  --color-gray-100: #e5e6e8;
+  --color-gray-400: #82868e; /* Shuttle Gray/400 er hex din */
   --color-gray-950: #242528; /* Shuttle Gray/950 er hex din */
 
-  --color-lime-400: #D4FB20;
-  --color-blue-800: #003BE2; /* Persian Blue/800 er hex din */
+  --color-lime-400: #d4fb20;
+  --color-blue-800: #003be2; /* Persian Blue/800 er hex din */
   --font-sans: var(--font-main);
   --font-display: var(--font-clash);
 }
@@ -17,4 +17,42 @@
     linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+.bg-soft {
+  background:
+    radial-gradient(
+      circle at 30% 6%,
+      color-mix(in srgb, var(--color-lime-400) 45%, transparent),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 18% 30%,
+      color-mix(in srgb, var(--color-blue-800) 8%, transparent),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 92% 92%,
+      color-mix(in srgb, var(--color-blue-800) 22%, transparent),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 0% 88%,
+      color-mix(in srgb, var(--color-lime-400) 75%, transparent),
+      transparent 15%
+    ),
+    var(--color-gray-50);
+}
+
+.bg-testimonials {
+  background:
+    /* top center: notun glow */
+    radial-gradient(ellipse 30% 55% at 58% 30%, color-mix(in srgb, var(--color-lime-400) 65%, transparent), transparent 60%),
+    /* right: aro dane soranu */
+    radial-gradient(ellipse 30% 65% at 105% 36%, color-mix(in srgb, var(--color-lime-400) 62%, transparent), transparent 70%),
+    radial-gradient(ellipse 20% 35% at 113% 48%, color-mix(in srgb, var(--color-lime-400) 74%, transparent), transparent 70%),
+    /* bottom left: age-r moto */
+    radial-gradient(ellipse 35% 45% at 4% 92%, color-mix(in srgb, var(--color-blue-800) 26%, transparent), transparent 70%),
+    radial-gradient(ellipse 25% 30% at 96% 92%, color-mix(in srgb, var(--color-blue-800) 16%, transparent), transparent 70%),
+    var(--color-gray-100);
 }

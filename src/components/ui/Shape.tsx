@@ -1,4 +1,6 @@
-export type ShapeType = "squiggle" | "cylinder" | "triangle" | "ring";
+import { useId } from "react";
+
+export type ShapeType = "squiggle" | "cylinder" | "triangle" | "cone" | "ring";
 
 type ShapeProps = {
     type: ShapeType;
@@ -6,6 +8,8 @@ type ShapeProps = {
 };
 
 export default function Shape({ type, className = "" }: ShapeProps) {
+    const id = useId().replace(/[^a-zA-Z0-9_-]/g, "");
+
     return (
         <svg
             viewBox="0 0 160 160"
@@ -41,22 +45,32 @@ export default function Shape({ type, className = "" }: ShapeProps) {
                 />
             )}
 
+            {type === "cone" && (
+                <path
+                    d="M80 22 L30 116 A50 22 0 0 0 130 116 Z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    strokeWidth="10"
+                    strokeLinejoin="round"
+                />
+            )}
+
             {type === "ring" && (
                 <>
                     <defs>
-                        <radialGradient id="ring-body" cx="40%" cy="35%" r="70%">
-                            <stop offset="0%" stopColor="#ffffff" />
-                            <stop offset="70%" stopColor="#ffffff" />
-                            <stop offset="100%" stopColor="#dfe4f2" />
+                        <radialGradient id={`${id}-body`} cx="40%" cy="35%" r="70%">
+                            <stop offset="0%" stopColor="currentColor" />
+                            <stop offset="70%" stopColor="currentColor" />
+                            <stop offset="100%" stopColor="currentColor" stopOpacity="0.85" />
                         </radialGradient>
-                        <mask id="ring-hole">
+                        <mask id={`${id}-hole`}>
                             <rect width="160" height="160" fill="white" />
                             <ellipse
                                 cx="88"
                                 cy="76"
                                 rx="30"
                                 ry="19"
-                                transform="rotate(88 76)"
+                                transform="rotate(-35 88 76)"
                                 fill="black"
                             />
                         </mask>
@@ -64,12 +78,24 @@ export default function Shape({ type, className = "" }: ShapeProps) {
 
                     <ellipse
                         cx="80"
-                        cy="80"
+                        cy="82"
                         rx="70"
                         ry="48"
                         transform="rotate(-35 80 82)"
-                        fill="url(#ring-body)"
-                        mask="url(#ring-hole)"
+                        fill={`url(#${id}-body)`}
+                        mask={`url(#${id}-hole)`}
+                    />
+
+                    <ellipse
+                        cx="88"
+                        cy="76"
+                        rx="30"
+                        ry="19"
+                        transform="rotate(-35 88 76)"
+                        fill="none"
+                        stroke="black"
+                        strokeWidth="3"
+                        opacity="0.12"
                     />
                 </>
             )}

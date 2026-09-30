@@ -6,7 +6,7 @@ import { categories, courses } from "@/data/courses";
 
 export default function Courses() {
     return (
-        <section id="courses" className="bg-white py-16 md:py-24">
+        <section id="courses" className="bg-white px-4 pt-16 pb-16 sm:px-10 md:pt-24 md:pb-16 lg:px-20">
             <Container>
                 <SectionHeading
                     title="Discover Your Passion, Build Your Skills"
