@@ -29,7 +29,7 @@ export default function CourseCard({ course }: CourseCardProps) {
                     {badges.map((badge) => (
                         <span
                             key={badge}
-                            className="rounded-full bg-gray-100/80 px-2 py-1 text-[10px] text-gray-950 backdrop-blur"
+                            className="rounded-full bg-gray-100/80 px-2 py-1 text-[6px] text-gray-950 backdrop-blur"
                         >
                             {badge}
                         </span>
@@ -39,7 +39,7 @@ export default function CourseCard({ course }: CourseCardProps) {
 
             <div className="mt-4 flex items-start justify-between gap-3">
                 <div>
-                    <h3 className="line-clamp-1 text-base font-semibold text-gray-950">
+                    <h3 className="line-clamp-1 text-sm font-semibold text-gray-950">
                         {course.title}
                     </h3>
                     <p className="mt-1 text-xs text-gray-400">

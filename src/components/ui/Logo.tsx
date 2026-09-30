@@ -1,8 +1,9 @@
 type LogoProps = {
     className?: string;
+    showText?: boolean;
 };
 
-export default function Logo({ className = "" }: LogoProps) {
+export default function Logo({ className = "", showText = true }: LogoProps) {
     return (
         <span className={`inline-flex items-center gap-2 ${className}`}>
             <svg viewBox="0 0 32 32" aria-hidden="true" className="h-7 w-7 text-lime-400">
@@ -16,9 +17,12 @@ export default function Logo({ className = "" }: LogoProps) {
                     strokeWidth="6"
                 />
             </svg>
-            <span className="font-display text-xl font-semibold tracking-tight">
-                ByteSpace
-            </span>
+
+            {showText && (
+                <span className="font-display text-xl font-semibold tracking-tight">
+                    ByteSpace
+                </span>
+            )}
         </span>
     );
 }
