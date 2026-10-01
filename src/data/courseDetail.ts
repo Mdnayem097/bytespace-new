@@ -29,7 +29,7 @@ export const courseDetail = {
     avatar: "/images/course-detail/creator.jpg",
   },
 
-  tabs: ["About", "Lessons", "Reviews"],
+  tabs: ["About", "Lesson", "Reviews"],
   description: [
     'Embark on an enlightening exploration into the world of digital creation with our comprehensive course, "Build Digital Assets: A Comprehensive Guide." This transformative learning experience invites you to delve deep into the intricacies of crafting impactful digital content. From laying the groundwork with foundational concepts to mastering advanced techniques, this guide is meticulously curated to empower you with the skills essential for navigating the dynamic landscape of digital asset creation.',
     "In the initial modules, you'll establish a solid foundation by immersing yourself in the foundational concepts that form the backbone of digital asset creation. Understand the fundamental elements that constitute compelling digital content and gain proficiency in leveraging these elements to communicate effectively in the digital realm.",
