@@ -50,3 +50,8 @@ export const courses: Course[] = [
     { ...base, id: 5, title: "Mastering Money Management", image: "/images/courses/course-5.jpg" },
     { ...base, id: 6, title: "From Idea to Startup Success", image: "/images/courses/course-6.jpg" },
 ];
+
+export const courseListing: Course[] = Array.from({ length: 18 }, (_, index) => ({
+    ...courses[index % courses.length],
+    id: index + 1,
+}));
