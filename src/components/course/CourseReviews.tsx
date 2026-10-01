@@ -6,6 +6,14 @@ import { courseDetail } from "@/data/courseDetail";
 export default function CourseReviews() {
     return (
         <section className="space-y-8">
+            <div className="mt-10">
+                <h2 className="text-xl font-semibold text-gray-950">
+                    What Learners Are Saying
+                </h2>
+                <p className="mt-2 text-sm text-gray-950/80">
+                    Discover what our learners have to say about their experience with 'Build Digital Assets: A Comprehensive Guide.' Read reviews and ratings from individuals who have embarked on the transformative journey of mastering digital asset creation.
+                </p>
+            </div>
             {/* Review Summary */}
             <div className="rounded-2xl bg-gray-50 p-6">
                 <div className="grid gap-8 md:grid-cols-[180px_1fr] md:items-center">
