@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import CourseContent from "@/app/courses/CourseContent";
-import CourseHero from "@/app/courses/CourseHero";
+import CourseContent from "@/components/course/CourseContent";
+import CourseHero from "@/components/course/CourseHero";
 import { courseListing } from "@/data/courses";
 
 type PageProps = {

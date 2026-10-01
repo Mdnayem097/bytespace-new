@@ -2,7 +2,7 @@ import { Share2, Signal, Star, Users } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import InfoPill from "@/components/ui/InfoPill";
-import CoursePreview from "@/app/courses/CoursePreview";
+import CoursePreview from "@/components/course/CoursePreview";
 import { courseDetail } from "@/data/courseDetail";
 import type { Course } from "@/data/courses";
 
